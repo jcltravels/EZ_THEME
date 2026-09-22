@@ -1593,7 +1593,7 @@ export default {
             break;
           case 'rocketproxy-ios':
           case 'rocketproxy-android':
-            url = `rocket://import?url=${encodeURIComponent(subscribeUrl)}`;
+            url = `rocketproxy://import?url=${encodeURIComponent(subscribeUrl)}&name=${encodeURIComponent(siteName)}&type=sub`;
             break;
           default:
             navigator.clipboard.writeText(subscribeUrl)
