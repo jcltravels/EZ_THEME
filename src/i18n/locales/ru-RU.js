@@ -224,6 +224,7 @@ export default {
     importToV2rayNG: 'Импортировать в V2rayNG',
     importToClash: 'Импортировать в Clash',
     importToClashX: 'Импортировать в ClashX',
+    importToRocketProxy: 'Импортировать в Rocket Proxy',
     selectPlatform: 'Выберите платформу устройства',
     subscriptionCopied: 'Ссылка подписки скопирована в буфер обмена',
     copyFailed: 'Ошибка копирования, скопируйте вручную',

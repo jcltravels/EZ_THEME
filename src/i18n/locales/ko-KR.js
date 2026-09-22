@@ -224,6 +224,7 @@ export default {
     importToV2rayNG: 'V2rayNG로 가져오기',
     importToClash: 'Clash로 가져오기',
     importToClashX: 'ClashX로 가져오기',
+    importToRocketProxy: 'Rocket Proxy로 가져오기',
     selectPlatform: '기기 플랫폼 선택',
     subscriptionCopied: '구독 링크가 클립보드에 복사되었습니다',
     copyFailed: '복사 실패, 수동으로 복사하세요',

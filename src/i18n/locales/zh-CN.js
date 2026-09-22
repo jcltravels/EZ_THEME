@@ -227,6 +227,7 @@ export default {
         importToV2rayNG: '导入到 V2rayNG',
         importToClash: '导入到 Clash',
         importToClashX: '导入到 ClashX',
+        importToRocketProxy: '导入到 Rocket Proxy',
         selectPlatform: '选择您的设备平台',
         subscriptionCopied: '订阅链接已复制到剪贴板',
         copyFailed: '复制失败，请手动复制',

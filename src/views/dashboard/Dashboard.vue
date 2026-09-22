@@ -293,6 +293,11 @@
                   <img :src="loonIcon" class="client-icon" alt="Loon"/>
                   <span>Loon</span>
                 </div>
+                <div v-if="clientConfig.showRocketProxyIOS" class="platform-option"
+                     @click="importToClient('rocketproxy-ios')">
+                  <img :src="rocketProxyIcon" class="client-icon" alt="Rocket Proxy"/>
+                  <span>Rocket Proxy</span>
+                </div>
               </div>
               <div v-else class="no-clients-message">
                 <p>{{ $t('dashboard.noClientsAvailable') }}</p>
@@ -338,6 +343,11 @@
                      @click="importToClient('hiddify-android')">
                   <img :src="hiddifyAndroidIcon" class="client-icon" alt="Hiddify"/>
                   <span>Hiddify</span>
+                </div>
+                <div v-if="clientConfig.showRocketProxyAndroid" class="platform-option"
+                     @click="importToClient('rocketproxy-android')">
+                  <img :src="rocketProxyAndroidIcon" class="client-icon" alt="Rocket Proxy"/>
+                  <span>Rocket Proxy</span>
                 </div>
               </div>
               <div v-else class="no-clients-message">
@@ -753,6 +763,7 @@ import stashIconImg from '@/assets/images/client-img-ios/stash.png';
 import quantumultIconImg from '@/assets/images/client-img-ios/quantumultx.png';
 import singboxIconImg from '@/assets/images/client-img-ios/singbox.png';
 import loonIconImg from '@/assets/images/client-img-ios/loon.png';
+import rocketProxyIconImg from '@/assets/images/client-img-ios/rocketproxy.png';
 import v2rayNGIconImg from '@/assets/images/client-img-android/v2rayng.png';
 import clashAndroidIconImg from '@/assets/images/client-img-android/clash.png';
 import surfboardIconImg from '@/assets/images/client-img-android/surfboard.png';
@@ -760,6 +771,7 @@ import clashMetaAndroidIconImg from '@/assets/images/client-img-android/clashmet
 import nekoboxIconImg from '@/assets/images/client-img-android/nekobox.png';
 import singboxAndroidIconImg from '@/assets/images/client-img-android/singbox.png';
 import hiddifyAndroidIconImg from '@/assets/images/client-img-android/hiddify.png';
+import rocketProxyAndroidIconImg from '@/assets/images/client-img-android/rocketproxy.png';
 import flclashIconImg from '@/assets/images/client-img-windows/flclash.png';
 import clashvergeIconImg from '@/assets/images/client-img-windows/clashverge.png';
 import clashWindowsIconImg from '@/assets/images/client-img-windows/clash.png';
@@ -885,6 +897,7 @@ export default {
     const quantumultIcon = quantumultIconImg;
     const singboxIcon = singboxIconImg;
     const loonIcon = loonIconImg;
+    const rocketProxyIcon = rocketProxyIconImg;
 
     const v2rayNGIcon = v2rayNGIconImg;
     const clashAndroidIcon = clashAndroidIconImg;
@@ -893,6 +906,7 @@ export default {
     const nekoboxIcon = nekoboxIconImg;
     const singboxAndroidIcon = singboxAndroidIconImg;
     const hiddifyAndroidIcon = hiddifyAndroidIconImg;
+    const rocketProxyAndroidIcon = rocketProxyAndroidIconImg;
 
     const flclashIcon = flclashIconImg;
     const clashvergeIcon = clashvergeIconImg;
@@ -1169,7 +1183,8 @@ export default {
           clientConfig.showQuantumultX ||
           clientConfig.showHiddifyIOS ||
           clientConfig.showSingboxIOS ||
-          clientConfig.showLoon;
+          clientConfig.showLoon ||
+          clientConfig.showRocketProxyIOS;
     });
 
     const hasAndroidClients = computed(() => {
@@ -1179,7 +1194,8 @@ export default {
           clientConfig.showClashMetaAndroid ||
           clientConfig.showNekobox ||
           clientConfig.showSingboxAndroid ||
-          clientConfig.showHiddifyAndroid;
+          clientConfig.showHiddifyAndroid ||
+          clientConfig.showRocketProxyAndroid;
     });
 
     const hasWindowsClients = computed(() => {
@@ -1575,6 +1591,10 @@ export default {
           case 'hiddify-ios':
             url = `hiddify://import/${subscribeUrl}#${encodeURIComponent(siteName)}`;
             break;
+          case 'rocketproxy-ios':
+          case 'rocketproxy-android':
+            url = `rocket://import?url=${encodeURIComponent(subscribeUrl)}`;
+            break;
           default:
             navigator.clipboard.writeText(subscribeUrl)
               .then(() => {
@@ -1850,6 +1870,8 @@ export default {
       hasWindowsClients,
       hasMacOSClients,
       shadowrocketIcon,
+      rocketProxyIcon,
+      rocketProxyAndroidIcon,
       surgeIcon,
       stashIcon,
       quantumultIcon,

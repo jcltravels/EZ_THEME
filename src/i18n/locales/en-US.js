@@ -227,6 +227,7 @@ export default {
         importToV2rayNG: 'Import to V2rayNG',
         importToClash: 'Import to Clash',
         importToClashX: 'Import to ClashX',
+        importToRocketProxy: 'Import to Rocket Proxy',
         selectPlatform: 'Select Your Device Platform',
         subscriptionCopied: 'Subscription link copied to clipboard',
         copyFailed: 'Copy failed, please copy manually',

@@ -224,6 +224,7 @@ export default {
     importToV2rayNG: 'وارد کردن به V2rayNG',
     importToClash: 'وارد کردن به Clash',
     importToClashX: 'وارد کردن به ClashX',
+    importToRocketProxy: 'وارد کردن به Rocket Proxy',
     selectPlatform: 'پلتفرم دستگاه را انتخاب کنید',
     subscriptionCopied: 'لینک اشتراک کپی شد',
     copyFailed: 'کپی شکست خورد، لطفا دستی کپی کنید',

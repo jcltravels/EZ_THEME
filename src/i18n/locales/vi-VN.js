@@ -233,6 +233,7 @@ export default {
         importToV2rayNG: 'Nhập vào V2rayNG',
         importToClash: 'Nhập vào Clash',
         importToClashX: 'Nhập vào ClashX',
+        importToRocketProxy: 'Nhập vào Rocket Proxy',
         selectPlatform: 'Chọn nền tảng thiết bị của bạn',
         subscriptionCopied: 'Liên kết đăng ký đã được sao chép vào clipboard',
         copyFailed: 'Sao chép thất bại, vui lòng sao chép thủ công',

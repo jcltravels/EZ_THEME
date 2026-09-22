@@ -299,6 +299,7 @@ export const config  = {
         showHiddifyIOS: true,
         showSingboxIOS: true,
         showLoon: true,
+        showRocketProxyIOS: true,
 
         // Android平台客户端
         showFlClashAndroid: true,
@@ -309,6 +310,7 @@ export const config  = {
         showNekobox: true,
         showSingboxAndroid: true,
         showHiddifyAndroid: true,
+        showRocketProxyAndroid: true,
 
         // Windows平台客户端
         showFlClashWindows: true,

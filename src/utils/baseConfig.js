@@ -364,6 +364,7 @@ const DEFAULT_CLIENT_CONFIG = {
     showHiddifyIOS: true,     // Hiddify for IOS
     showSingboxIOS: true,     // SingBox for iOS
     showLoon: true,           // Loon
+    showRocketProxyIOS: true, // Rocket Proxy for iOS
 
     // Android平台客户端
     showFlClashAndroid: true,   // FlClash for Android
@@ -374,6 +375,7 @@ const DEFAULT_CLIENT_CONFIG = {
     showNekobox: true,          // Nekobox
     showSingboxAndroid: true,   // SingBox for Android
     showHiddifyAndroid: true,   // Hiddify for Android
+    showRocketProxyAndroid: true, // Rocket Proxy for Android
 
     // Windows平台客户端
     showFlClashWindows: true,   // FlClash for Windows
